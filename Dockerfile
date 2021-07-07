@@ -14,7 +14,7 @@ WORKDIR /var/www/nuxt-restart-ssr
 COPY ./ /var/www/nuxt-restart-ssr
 RUN yarn install
 RUN yarn build
-
+ENV HOST 0.0.0.0
 EXPOSE 3000
 
 ENTRYPOINT ["yarn", "start"]
